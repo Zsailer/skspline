@@ -5,8 +5,30 @@ A Scikit-learn interface on Scipy's ``Univariate Spline``.
 
 .. code-block:: python
 
+  import matplotlib.pyplot as plt
   import numpy as np
-  from skspline import Spline
+  import skspline
 
-  model = Spline(k=3)
-  model.fit()
+  # Simulate data.
+  x = np.linspace(0, 4, 100)
+  y = 10*np.sin(x)
+  yerr = np.random.randn(len(y_))
+
+  # Add noise to y.
+  y = y + yerr
+
+  # Initialize a Scikit Spline model and fit.
+  m = skspline.Spline(k=2)
+  m.fit(x, y)
+
+  # Get model
+  xmodel = np.linspace(0, 4, 1000)
+  ymodel = m.predict(xmodel)
+
+  # plot data and model
+  plt.scatter(x, y)
+  plt.plot(xx,yy, color='k', linewidth=5)
+
+
+.. image:: docs/_img/example.png
+  :scale: 50 %
