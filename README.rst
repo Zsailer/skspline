@@ -12,7 +12,7 @@ A Scikit-learn interface on Scipy's ``Univariate Spline``.
   # Simulate data.
   x = np.linspace(0, 4, 100)
   y = 10*np.sin(x)
-  yerr = np.random.randn(len(y_))
+  yerr = np.random.randn(len(y))
 
   # Add noise to y.
   y = y + yerr
@@ -27,7 +27,8 @@ A Scikit-learn interface on Scipy's ``Univariate Spline``.
 
   # plot data and model
   plt.scatter(x, y)
-  plt.plot(xx,yy, color='k', linewidth=5)
+  plt.plot(xmodel,ymodel, color='k', linewidth=5)
+  plt.show()
 
 
 .. image:: docs/_img/example.png
